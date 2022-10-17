@@ -1,5 +1,4 @@
-const htmlRoutes = require("./routes/htmlRoutes")
-const apiRoutes = require("./routes/apiRoutes")
+const routes = require("./routes")
 const express = require("express")
 const path = require('path');
 const app = express();
@@ -9,9 +8,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.use("/api", apiRoutes)
+app.use("/", routes)
 
-app.use("/", htmlRoutes)
+// app.use("/", htmlRoutes)
 
 app.listen(PORT, () =>
     console.log(`Example app listening at http://localhost:${PORT}`)
