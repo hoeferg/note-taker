@@ -4,7 +4,9 @@ const router = require("express").Router()
 const notes = require("../db/db.json")
 const uuidv1 = require("uuidv1")
 
+// Retrieve notes
 router.get("/notes", (req, res) => res.json(notes));
+// Displays new notes
 router.post("/notes", (req, res) => {
     const savedNotes = notes
     const newNote = {
@@ -17,7 +19,7 @@ router.post("/notes", (req, res) => {
     fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(savedNotes))
     res.json(newNote)
 });
-// [{"id":1,"title":"test2","text":"test2"},{"id":2,"title":"new","text":"new"}]
+// Allows notes to be deleted
 router.delete("/notes/:id", (req, res) => {
     const id = req.params.id;
     const savedNotes = notes;
