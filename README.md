@@ -12,7 +12,7 @@ https://peaceful-scrubland-90287.herokuapp.com/notes
 
 ## Usage
 
-In the space provided record a note title and the note content. Click on the save button in the top right corner. This will save the note that was created. To open the note again after saving, click on the note on the left side. This will bring your note to the main viewer of the program. If you would like to delete the note, click on the red trash can next to the note you want to delete. 
+In the space provided record a note title and the note content. Click on the save button in the top right corner. This will save the note that was created. This will be saved to your local stoarage in the browser. To open the note again after saving, click on the note on the left side. This will bring your note to the main viewer of the program. If you would like to delete the note, click on the red trash can next to the note you want to delete.
 
 ## Installation
 
